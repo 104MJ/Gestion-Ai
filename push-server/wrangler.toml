@@ -1,0 +1,15 @@
+name = "cap-rappels"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# Vérifie toutes les 15 minutes s'il faut envoyer un rappel
+[triggers]
+crons = ["*/15 * * * *"]
+
+[vars]
+# Remplace par l'adresse de ton site (ex. https://ton-pseudo.github.io)
+ALLOWED_ORIGIN = "*"
+
+[[kv_namespaces]]
+binding = "SUBS"
+id = "REMPLACE_PAR_L_ID_DU_KV"
